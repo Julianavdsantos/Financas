@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="./style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap"
       rel="stylesheet"
@@ -24,7 +25,6 @@
         <div class="card">
           <h3>
             <span> Entradas </span>
-            
           </h3>
           <p id="incomeDisplay">R$ 0,00</p>
         </div>
@@ -32,7 +32,6 @@
         <div class="card">
           <h3>
             <span> Saídas </span>
-            
           </h3>
           <p id="expenseDisplay">R$ 0,00</p>
         </div>
@@ -40,7 +39,6 @@
         <div class="card total">
           <h3>
             <span> Total </span>
-            
           </h3>
           <p id="totalDisplay">R$ 0,00</p>
         </div>
@@ -70,7 +68,7 @@
     <div class="modal-overlay">
       <div class="modal">
         <div id="form">
-          <h2>Nova Transação</h2>
+          <h2 id="title">Nova Transação</h2>
           <form action="" onsubmit="Form.submit(event)">
             <div class="input-group">
               <label class="sr-only" for="description">Descrição</label>
@@ -80,7 +78,6 @@
                 name="description"
                 placeholder="Descrição"
               />
-              
             </div>
 
             <div class="input-group">
@@ -103,6 +100,22 @@
               <input type="date" id="date" name="date" />
             </div>
 
+            <div><p>Tipo de Gastos:</p></div>
+
+            <select id="tipodeGasto">
+              <option value="alimentação">Alimentação</option>
+              <option value="saude">Saúde</option>
+              <option value="educacao">Educação</option>
+
+              <option value="Transporte">Transporte</option>
+              <option value="Moradia">Moradia</option>
+
+              <option value="impostos">Impostos</option>
+              <!---São os pagamentos de empréstimos, financiamentos, cartões de crédito e outras dívidas contraídas.-->
+              <option value="Seguros">Seguros</option>
+              <option value="investimentos">Investimentos</option>
+            </select>
+
             <div class="input-group actions">
               <a onclick="Modal.close()" href="#" class="button cancel"
                 >Cancelar</a
@@ -113,9 +126,11 @@
         </div>
       </div>
     </div>
-
-    <footer><p></p></footer>
+    <!--<a href="http://localhost:3000/grafico" target="_blank">
+      <button>Acessar Gráfico</button>
+    </a>--->
 
     <script src="script.js"></script>
+    <script src="grafico.js"></script>
   </body>
 </html>
